@@ -11,7 +11,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $this->app->singleton(
+            \App\Services\Jubelio\JubelioClient::class,
+            fn() => \App\Services\Jubelio\JubelioClient::fromConfig(),
+        );
+
     }
 
     /**

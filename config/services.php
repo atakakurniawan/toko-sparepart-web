@@ -35,4 +35,16 @@ return [
         ],
     ],
 
+     'jubelio' => [
+        'base_url' => env('JUBELIO_BASE_URL', 'https://api2.jubelio.com'),
+        'email' => env('JUBELIO_EMAIL'),
+        'password' => env('JUBELIO_PASSWORD'),
+        'webhook_secret' => env('JUBELIO_WEBHOOK_SECRET'),
+        'location_id' => env('JUBELIO_LOCATION_ID'),
+        'token_ttl_minutes' => 660, // token berlaku 12 jam, simpan 11 jam
+        'timeout' => 30,
+        'retries' => 3,
+        'retry_sleep_ms' => 1000,
+    ],
+
 ];
